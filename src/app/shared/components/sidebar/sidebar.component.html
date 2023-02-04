@@ -3,6 +3,11 @@
   <hr class="text-white" />
 
   <div class="list-group list-reset">
-    <button class="list-group-item list-group-item-action">Saitama</button>
+    <button
+      *ngFor="let gif of tags"
+      class="list-group-item list-group-item-action"
+    >
+      {{ gif | titlecase }}
+    </button>
   </div>
 </div>
