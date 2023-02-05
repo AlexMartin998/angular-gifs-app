@@ -9,8 +9,10 @@ import { GifsService } from '../../services/gifs.service';
       type="text"
       class="form-control"
       placeholder="Search gifs..."
+
       (keyup.enter)="searchTag()"
       #txtTagInput
+      autofocus
     />
   `,
 })
