@@ -6,7 +6,7 @@ import { SearchResponse, Gif } from '../interfaces/gifs.interface';
 @Injectable({ providedIn: 'root' })
 export class GifsService {
   public gifsList: Gif[] = [];
-  private _tagsHistory: string[] = ['Saitama'];
+  private _tagsHistory: string[] = [];
   private apiKey: string = '';
   private serviceUrl: string = 'https://api.giphy.com/v1/gifs';
 
@@ -41,7 +41,7 @@ export class GifsService {
   }
 
   private organizeHistory(tag: string) {
-    tag = tag.toLowerCase();
+    tag = tag.toLowerCase().trim();
     if (this._tagsHistory.includes(tag))
       this._tagsHistory = this._tagsHistory.filter((oldTag) => oldTag !== tag);
 

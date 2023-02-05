@@ -12,6 +12,7 @@ import { GifsService } from '../../services/gifs.service';
 
       (keyup.enter)="searchTag()"
       #txtTagInput
+
       autofocus
     />
   `,
@@ -22,6 +23,7 @@ export class SearchBoxComponent {
 
   constructor(private readonly gifsService: GifsService) {}
 
+  // (keyup.enter)="searchTag(txtTagInput.value)"
   // searchTag(newTag: string) {
   searchTag() {
     const newTag = this.tagInput.nativeElement.value;

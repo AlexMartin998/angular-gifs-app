@@ -4,10 +4,12 @@
 
   <div class="list-group list-reset">
     <button
-      *ngFor="let gif of tags"
+      *ngFor="let tag of tags"
       class="list-group-item list-group-item-action"
+
+      (click)="searchTagHistory(tag)"
     >
-      {{ gif | titlecase }}
+      {{ tag | titlecase }}
     </button>
   </div>
 </div>
